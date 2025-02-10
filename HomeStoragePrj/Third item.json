@@ -1,0 +1,8 @@
+{
+  "id" : "Third item",
+  "nameItem" : "Hammer",
+  "type" : "Instruments",
+  "volume" : 17.12,
+  "weight" : 8.17,
+  "bestBeforeDate" : [ 2025, 2, 10, 18, 38, 29, 814997200 ]
+}

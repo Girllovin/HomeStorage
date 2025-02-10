@@ -1,0 +1,71 @@
+{
+  "storageNameString" : "Our storage room",
+  "itemsTypeList" : [ ],
+  "placingShelf" : [ {
+    "id" : "Shelf1",
+    "itemsType" : "Everything",
+    "items" : [ {
+      "id" : "Third item",
+      "nameItem" : "Hammer",
+      "type" : "Instruments",
+      "volume" : 17.12,
+      "weight" : 8.17,
+      "bestBeforeDate" : [ 2025, 2, 10, 18, 38, 29, 814997200 ]
+    }, {
+      "id" : "Second item",
+      "nameItem" : "Watermelon",
+      "type" : "Food",
+      "volume" : 1.05,
+      "weight" : 2.1,
+      "bestBeforeDate" : [ 2025, 2, 10, 18, 38, 29, 813996500 ]
+    }, {
+      "id" : "First item",
+      "nameItem" : "Ski",
+      "type" : "Sport",
+      "volume" : 10.12,
+      "weight" : 6.15,
+      "bestBeforeDate" : [ 2025, 2, 10, 18, 38, 29, 737299400 ]
+    } ],
+    "capacity" : 500.0,
+    "currentCapacity" : 500.0,
+    "permittedWeight" : 100.0,
+    "currentWeight" : 0.0,
+    "warnings" : false,
+    "stateWarnings" : [ ]
+  }, {
+    "id" : "Shelf2",
+    "itemsType" : "Everything",
+    "items" : [ {
+      "id" : "Sixth item",
+      "nameItem" : "Skateboard",
+      "type" : "Sport",
+      "volume" : 7.12,
+      "weight" : 4.07,
+      "bestBeforeDate" : [ 2025, 2, 10, 18, 38, 29, 826505400 ]
+    }, {
+      "id" : "Forth item",
+      "nameItem" : "Scooter",
+      "type" : "Sport",
+      "volume" : 40.12,
+      "weight" : 11.15,
+      "bestBeforeDate" : [ 2025, 2, 10, 18, 38, 29, 825505600 ]
+    }, {
+      "id" : "Fifth item",
+      "nameItem" : "Bread",
+      "type" : "Food",
+      "volume" : 0.5,
+      "weight" : 1.1,
+      "bestBeforeDate" : [ 2025, 2, 10, 18, 38, 29, 826505400 ]
+    } ],
+    "capacity" : 500.0,
+    "currentCapacity" : 500.0,
+    "permittedWeight" : 100.0,
+    "currentWeight" : 0.0,
+    "warnings" : false,
+    "stateWarnings" : [ ]
+  } ],
+  "storageCapacity" : 2000.0,
+  "currentFreeStorageCapacity" : 0.0,
+  "warnings" : false,
+  "stateWarnings" : [ ]
+}
