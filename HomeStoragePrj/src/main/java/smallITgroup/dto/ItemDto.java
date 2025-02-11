@@ -15,6 +15,7 @@ import lombok.ToString;
 @ToString 
 public class ItemDto {
 	
+
 	//description
 	String id;                       // Unique identifier
     String nameItem;                 // Name of item
