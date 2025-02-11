@@ -16,6 +16,7 @@ import smallITgroup.dto.ItemDto;
 import smallITgroup.dto.ShelfDto;
 
 public class MainController {
+	static HomeStorageDto storage;
 	static char lineCounter = 'A';
 	static int shelfCounter = 0;
 	static int counterItem = 0;

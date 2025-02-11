@@ -1,8 +1,0 @@
-{
-  "id" : "First item",
-  "nameItem" : "Ski",
-  "type" : "Sport",
-  "volume" : 10.12,
-  "weight" : 6.15,
-  "bestBeforeDate" : [ 2025, 2, 10, 18, 38, 29, 737299400 ]
-}
