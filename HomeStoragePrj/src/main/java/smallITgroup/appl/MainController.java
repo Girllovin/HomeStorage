@@ -5,7 +5,9 @@ import java.io.File;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Set;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -22,10 +24,9 @@ public class MainController {
 	static int counterItem = 0;
 	public static ObjectMapper mapper = new ObjectMapper();
 	
-	public static void main(String[] args) {		
-       
-		lineCounter++;
-		ItemDto item1 = new ItemDto("First item","Ski", "Sport", "A1", 10.12, 6.15, LocalDateTime.now()) ;
+	public static void main(String[] args) {	
+		lineCounter++;		
+		ItemDto item1 = new ItemDto("First item", "Chair", "Furniture", "A2", 2.2, 1.7, LocalDateTime.now()) ;
 		SavingData.saveItemData(item1);
 		ItemDto item2 = new ItemDto("Second item", "Watermelon", "Food", "A1", 1.05, 2.10, LocalDateTime.now()) ;
 		SavingData.saveItemData(item2);
@@ -72,9 +73,10 @@ public class MainController {
 		ShelfDto shelf4 = SavingData.restoreShelf(file2);
 		System.out.println(shelf4);
 		HomeStorageDto homeStorage1 = SavingData.restoreStorage(file3);
-		System.out.println(homeStorage1);
+		System.out.println(homeStorage1);	
 		
-	}
-	
-
+//		Menu option
+		MenuOptions menu = new MenuOptions();
+		menu.menu();
+	}	
 }

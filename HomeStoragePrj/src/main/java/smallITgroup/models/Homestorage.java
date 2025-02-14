@@ -6,7 +6,7 @@ public class Homestorage {
 	//description
 		String storageNameString;      // Name of storage room
 		List<String> itemsTypeList;    // List of items placed in the storage
-		List<Shelf> placingShelf;   // List of shelfs in the storage
+		List<Shelf> placingShelf;      // List of shelfs in the storage
 		
 		//characteristics
 		double storageCapacity;        // Total storage capacity
