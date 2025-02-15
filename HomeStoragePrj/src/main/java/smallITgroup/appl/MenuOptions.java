@@ -84,12 +84,12 @@ public class MenuOptions {
 	            case 1:  
 	            	System.out.println("Input product name\n");
 	            	String itemName = scanner.next();
-	            	controller.itemNameSearch(itemName);
+	            	controller.findItemByName(itemName);
 	            	break;
 	            case 2:   
 	            	System.out.println("Input product ID\n");
 	            	String itemId = scanner.next();
-	            	controller.itemIdSearch(itemId);
+	            	controller.findItemById(itemId);
 	            	break;
 	            case 0:
 	            	System.out.println("Return to the main menu\n");
