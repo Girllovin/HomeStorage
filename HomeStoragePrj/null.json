@@ -1,0 +1,9 @@
+{
+  "id" : null,
+  "nameItem" : null,
+  "type" : null,
+  "shelfId" : null,
+  "volume" : 0.0,
+  "weight" : 0.0,
+  "bestBeforeDate" : null
+}
