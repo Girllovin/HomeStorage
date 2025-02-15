@@ -2,21 +2,13 @@
   "id" : "Shelf1",
   "itemsType" : "Everything",
   "items" : [ {
-    "id" : "Third item",
-    "nameItem" : "Hammer",
-    "type" : "Instruments",
-    "shelfId" : "A1",
-    "volume" : 17.12,
-    "weight" : 8.17,
-    "bestBeforeDate" : [ 2025, 2, 14, 20, 18, 33, 389297200 ]
-  }, {
     "id" : "First item",
     "nameItem" : "Chair",
     "type" : "Furniture",
     "shelfId" : "A2",
     "volume" : 2.2,
     "weight" : 1.7,
-    "bestBeforeDate" : [ 2025, 2, 14, 20, 18, 33, 294289100 ]
+    "bestBeforeDate" : [ 2025, 2, 16, 0, 13, 2, 232840000 ]
   }, {
     "id" : "Second item",
     "nameItem" : "Watermelon",
@@ -24,7 +16,15 @@
     "shelfId" : "A1",
     "volume" : 1.05,
     "weight" : 2.1,
-    "bestBeforeDate" : [ 2025, 2, 14, 20, 18, 33, 388006500 ]
+    "bestBeforeDate" : [ 2025, 2, 16, 0, 13, 2, 326966400 ]
+  }, {
+    "id" : "Third item",
+    "nameItem" : "Hammer",
+    "type" : "Instruments",
+    "shelfId" : "A1",
+    "volume" : 17.12,
+    "weight" : 8.17,
+    "bestBeforeDate" : [ 2025, 2, 16, 0, 13, 2, 327967000 ]
   } ],
   "capacity" : 500.0,
   "currentCapacity" : 500.0,

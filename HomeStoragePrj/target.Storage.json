@@ -5,21 +5,13 @@
     "id" : "Shelf1",
     "itemsType" : "Everything",
     "items" : [ {
-      "id" : "Third item",
-      "nameItem" : "Hammer",
-      "type" : "Instruments",
-      "shelfId" : "A1",
-      "volume" : 17.12,
-      "weight" : 8.17,
-      "bestBeforeDate" : [ 2025, 2, 14, 20, 18, 33, 389297200 ]
-    }, {
       "id" : "First item",
       "nameItem" : "Chair",
       "type" : "Furniture",
       "shelfId" : "A2",
       "volume" : 2.2,
       "weight" : 1.7,
-      "bestBeforeDate" : [ 2025, 2, 14, 20, 18, 33, 294289100 ]
+      "bestBeforeDate" : [ 2025, 2, 16, 0, 13, 2, 232840000 ]
     }, {
       "id" : "Second item",
       "nameItem" : "Watermelon",
@@ -27,7 +19,15 @@
       "shelfId" : "A1",
       "volume" : 1.05,
       "weight" : 2.1,
-      "bestBeforeDate" : [ 2025, 2, 14, 20, 18, 33, 388006500 ]
+      "bestBeforeDate" : [ 2025, 2, 16, 0, 13, 2, 326966400 ]
+    }, {
+      "id" : "Third item",
+      "nameItem" : "Hammer",
+      "type" : "Instruments",
+      "shelfId" : "A1",
+      "volume" : 17.12,
+      "weight" : 8.17,
+      "bestBeforeDate" : [ 2025, 2, 16, 0, 13, 2, 327967000 ]
     } ],
     "capacity" : 500.0,
     "currentCapacity" : 500.0,
@@ -39,13 +39,13 @@
     "id" : "Shelf2",
     "itemsType" : "Everything",
     "items" : [ {
-      "id" : "Fifth item",
-      "nameItem" : "Bread",
-      "type" : "Food",
+      "id" : "Forth item",
+      "nameItem" : "Scooter",
+      "type" : "Sport",
       "shelfId" : "A1",
-      "volume" : 0.5,
-      "weight" : 1.1,
-      "bestBeforeDate" : [ 2025, 2, 14, 20, 18, 33, 403765200 ]
+      "volume" : 40.12,
+      "weight" : 11.15,
+      "bestBeforeDate" : [ 2025, 2, 16, 0, 13, 2, 339966500 ]
     }, {
       "id" : "Sixth item",
       "nameItem" : "Skateboard",
@@ -53,15 +53,15 @@
       "shelfId" : "A1",
       "volume" : 7.12,
       "weight" : 4.07,
-      "bestBeforeDate" : [ 2025, 2, 14, 20, 18, 33, 405229000 ]
+      "bestBeforeDate" : [ 2025, 2, 16, 0, 13, 2, 341966000 ]
     }, {
-      "id" : "Forth item",
-      "nameItem" : "Scooter",
-      "type" : "Sport",
+      "id" : "Fifth item",
+      "nameItem" : "Bread",
+      "type" : "Food",
       "shelfId" : "A1",
-      "volume" : 40.12,
-      "weight" : 11.15,
-      "bestBeforeDate" : [ 2025, 2, 14, 20, 18, 33, 403765200 ]
+      "volume" : 0.5,
+      "weight" : 1.1,
+      "bestBeforeDate" : [ 2025, 2, 16, 0, 13, 2, 340964500 ]
     } ],
     "capacity" : 500.0,
     "currentCapacity" : 500.0,

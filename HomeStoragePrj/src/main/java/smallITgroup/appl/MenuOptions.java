@@ -3,6 +3,8 @@ package smallITgroup.appl;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import smallITgroup.dto.HomeStorageDto;
+
 public class MenuOptions {
 	static Scanner scanner = new Scanner(System.in);
 	static StorageController controller = new StorageController();
@@ -19,22 +21,22 @@ public class MenuOptions {
 			}		
 	        switch (choice) {
 	            case 1:
-	            	monitorStorageMenu();
+	            	createStorage();	            	
 	                break;
 	            case 2:     
-	            	searchMenu();
+	            	manageShelvesMenu();	            	
 	                break;
 	            case 3:
-	            	manageShelvesMenu();
+	            	manageProductMenu();	            	
 	                break;
 	            case 4:
-	            	manageProductMenu();
+	            	monitorStorageMenu();	            	
 	                break;
 	            case 5:
-	            	organizeStorage();
+	            	searchMenu();
 	                break;
 	            case 6:   
-//	            	TODO Input storage name
+//	            	TODO Input storage object
 	            	controller.checkGlobalWarnings(null);
 	                break;
 
@@ -49,21 +51,61 @@ public class MenuOptions {
 		}	
 	}	
 
-	private static void organizeStorage() {
-		// TODO Auto-generated method stub
+	private static void createStorage() {
+		System.out.println("Input storage name: ");
+		String storageNameString = scanner.next();
+		System.out.println("Input total storage volume(Ex. 1.2): ");
+		double storageCapacity = 0;
+		try {
+			storageCapacity = scanner.nextDouble();
+		} catch (InputMismatchException e) {
+			System.err.println("Input Error! Try again. ");
+		}
 		
+//		Create new object HomeStorageDto
+		HomeStorageDto newHomeStorage = new HomeStorageDto(storageNameString, storageCapacity );
+		
+//		Save new storage	
+		SavingData.saveStorageData(newHomeStorage);
 	}
 
+	private static void manageShelvesMenu() {
+		System.out.println("""
+				1. Add new shelf
+				2. Remove shelf
+
+				0. Main menu
+				""");
+		while (true) {
+			int choice;
+			try {
+				choice = scanner.nextInt();
+			} catch(InputMismatchException e) {
+				System.err.println("Input Error! Try again.");
+				scanner.nextLine(); 
+				continue;
+			}		
+	        switch (choice) {
+	            case 1:  
+
+	            	break;
+	            case 2:   
+
+	            	break;
+	            case 0:
+	            	System.out.println("/nReturn to the main menu\n");
+	                return;
+	            default:
+	                System.err.println("\nInvalid choice. Please try again.\n");
+	        }
+		}
+	}
+	
 	private static void manageProductMenu() {
 		// TODO Auto-generated method stub
 		
 	}
-
-	private static void manageShelvesMenu() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 	private static void searchMenu() {
 		System.out.println("""
 				1. Search by Name
@@ -92,13 +134,12 @@ public class MenuOptions {
 	            	controller.itemIdSearch(itemId);
 	            	break;
 	            case 0:
-	            	System.out.println("Return to the main menu\n");
+	            	System.out.println("/nReturn to the main menu\n");
 	                return;
 	            default:
-	                System.out.println("\nInvalid choice. Please try again.\n");
+	                System.err.println("\nInvalid choice. Please try again.\n");
 	        }
-		}
-		
+		}		
 	}
 
 	private static void monitorStorageMenu() {
@@ -120,9 +161,9 @@ public class MenuOptions {
 	        switch (choice) {
 	            case 1:
 	            	System.out.println("Input shelf number: ");
-	            	String shelfNumber = scanner.next();
-	            	
+	            	String shelfNumber = scanner.next();	            	
 //	            	TODO Checking if the shelf does exist
+	            	
 	            	controller.showItemsOnTheShelf(shelfNumber);	            	            	
 	            	return;
 	            case 2:   
@@ -132,10 +173,10 @@ public class MenuOptions {
 	            	return;
 
 	            case 0:
-	            	System.out.println("Return to the main menu\n");
+	            	System.out.println("\nReturn to the main menu\n");
 	                return;
 	            default:
-	                System.out.println("\nInvalid choice. Please try again.\n");
+	                System.err.println("\nInvalid choice. Please try again.\n");
 	        }
 		}
 	}
@@ -143,11 +184,11 @@ public class MenuOptions {
 		System.out.println("""
 				||Home Storage Menegement System (HSMS)||
 
-				1. Inventory View
-				2. Search
-				3. Manage Shelves
-				4. Product Management
-				5. Organize Storage
+				1. Create Storage
+				2. Manage Shelves
+				3. Items Management
+				4. Inventory View
+				5. Search
 				6. Expiration Date Tracking
 				
 				0. Exit the application
