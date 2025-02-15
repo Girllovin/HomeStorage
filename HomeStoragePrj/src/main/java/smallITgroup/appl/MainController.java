@@ -17,9 +17,12 @@ import smallITgroup.dto.ShelfDto;
 
 public class MainController {
 	static HomeStorageDto storage;
+	static ShelfDto nextShelf; 
+	
 	static char lineCounter = 'A';
 	static int shelfCounter = 0;
 	static int counterItem = 0;
+	
 	public static ObjectMapper mapper = new ObjectMapper();
 	
 	public static void main(String[] args) {		

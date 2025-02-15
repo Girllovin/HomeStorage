@@ -12,12 +12,13 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@EqualsAndHashCode
 @ToString 
 public class HomeStorageDto {
 	
 	//description
+	@EqualsAndHashCode.Include
 	String storageNameString;          // Name of storage room
+	
 	List<String> itemsTypeList;        // List of items placed in the storage
 	List<ShelfDto> placingShelf;       // List of shelfs in the storage
 	

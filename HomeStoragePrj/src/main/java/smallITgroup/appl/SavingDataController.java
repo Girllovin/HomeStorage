@@ -10,7 +10,7 @@ import smallITgroup.dto.ShelfDto;
 import java.io.File;
 import java.io.IOException;
 
-public class SavingData {
+public class SavingDataController {
 	static ObjectMapper mapper = new ObjectMapper();
 
 	// saving whole storage system into the file "target.Storage.json"
