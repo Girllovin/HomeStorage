@@ -30,11 +30,11 @@ public class MainController {
 	public static void main(String[] args) {	
 		lineCounter++;		
 		ItemDto item1 = new ItemDto("First item", "Chair", "Furniture", "A2", 2.2, 1.7, LocalDateTime.now()) ;
-		SavingData.saveItemData(item1);
+		SavingDataController.saveItemData(item1);
 		ItemDto item2 = new ItemDto("Second item", "Watermelon", "Food", "A1", 1.05, 2.10, LocalDateTime.now()) ;
-		SavingData.saveItemData(item2);
+		SavingDataController.saveItemData(item2);
 		ItemDto item3 = new ItemDto("Third item","Hammer", "Instruments", "A1", 17.12, 8.17, LocalDateTime.now()) ;
-		SavingData.saveItemData(item3);
+		SavingDataController.saveItemData(item3);
 		Set<ItemDto> items = new HashSet<ItemDto>();
 		items.add(item1);
 		items.add(item2);
@@ -44,38 +44,38 @@ public class MainController {
 		
 		
 		ShelfDto shelf1 = new ShelfDto("Shelf" + ++shelfCounter, "Everything", items, 500.0, 500.0, 100.0, 0.0, false, warnings );
-		SavingData.saveShelfData(shelf1);
+		SavingDataController.saveShelfData(shelf1);
 		
 		ItemDto item4 = new ItemDto("Forth item","Scooter", "Sport", "A1", 40.12, 11.15, LocalDateTime.now()) ;
-		SavingData.saveItemData(item4);
+		SavingDataController.saveItemData(item4);
 		ItemDto item5 = new ItemDto("Fifth item", "Bread", "Food", "A1", 0.5, 1.10, LocalDateTime.now()) ;
-		SavingData.saveItemData(item5);
+		SavingDataController.saveItemData(item5);
 		ItemDto item6 = new ItemDto("Sixth item","Skateboard", "Sport", "A1", 7.12, 4.07, LocalDateTime.now()) ;
-		SavingData.saveItemData(item6);
+		SavingDataController.saveItemData(item6);
 		Set<ItemDto> items2 = new HashSet<ItemDto>();
 		items2.add(item4);
 		items2.add(item5);
 		items2.add(item6);
 		
 		ShelfDto shelf3 = new ShelfDto("Shelf" + ++shelfCounter, "Everything", items2, 500, 500, 100, 0, false, warnings );
-		SavingData.saveShelfData(shelf3);
+		SavingDataController.saveShelfData(shelf3);
 		
 		List<ShelfDto> shelfs = new ArrayList<ShelfDto>();
 		shelfs.add(shelf1);
 		shelfs.add(shelf3);
 		HomeStorageDto homeStorage = new HomeStorageDto("Our storage room", warnings, shelfs, 2000, 0, false, warnings);
-		SavingData.saveStorageData(homeStorage);
+		SavingDataController.saveStorageData(homeStorage);
 		
 		
 		File file = new File("Shelf1.json");
 		File file2 = new File("Shelf2.json");
 		File file3 = new File("target.Storage.json");
 		
-		ShelfDto shelf2 = SavingData.restoreShelf(file);
+		ShelfDto shelf2 = SavingDataController.restoreShelf(file);
 		System.out.println(shelf2);
-		ShelfDto shelf4 = SavingData.restoreShelf(file2);
+		ShelfDto shelf4 = SavingDataController.restoreShelf(file2);
 		System.out.println(shelf4);
-		HomeStorageDto homeStorage1 = SavingData.restoreStorage(file3);
+		HomeStorageDto homeStorage1 = SavingDataController.restoreStorage(file3);
 		System.out.println(homeStorage1);	
 		
 //		Menu option

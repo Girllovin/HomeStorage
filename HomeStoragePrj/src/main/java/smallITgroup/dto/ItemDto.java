@@ -41,8 +41,11 @@ public class ItemDto {
 		this.shelfId = "";
 	}
 
-	public void setShelfId(String shelfId) {
-		this.shelfId = shelfId;
+
+
+	public void setShelfId(String id) {
+		// TODO Auto-generated method stub
+		this.shelfId = id;
 	}
 	
 	

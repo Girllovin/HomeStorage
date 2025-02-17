@@ -136,14 +136,28 @@ public class StorageController {
 	
 	public static boolean replaceItem(String itemId, String shelfId) {
 
-		// TODO
+		try {
+			if (itemPlacement(findItemById(itemId), findShelfById(shelfId))) {
+				takeItem(itemId);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
 		return false;
 		
 	}
 	
 	public static ShelfDto checkWarnings(ShelfDto shelf) {
 
-		// TODO
+		for (ItemDto item : shelf.getItems()) {
+			if (item.getBestBeforeDate().plusDays(1).isBefore(LocalDateTime.now())) {
+				shelf.getStateWarnings().add(" Item " + item.getNameItem() +" - " + item.getId() + " is out of date!!!\n");
+			}
+		}
+		
 		return shelf;
 		
 	}
