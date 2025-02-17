@@ -63,7 +63,7 @@ public class StorageController {
 		// TODO
 	}
 
-	public static void showItemsInTheStorage(String storageName) {
+	public static void showItemsInTheStorage(HomeStorageDto homeStorage) {
 
 		// TODO
 	}

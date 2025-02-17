@@ -22,7 +22,7 @@ public class SavingDataController {
 			e.printStackTrace();
 		}
 		try {
-			File file = new File("target.Storage.json");
+			File file = new File("src\\Files\\target.Storage.json");
 			mapper.writeValue(file, storage);
 			System.out.println("Storage data saved successfully.");
 		} catch (IOException e) {
@@ -38,7 +38,7 @@ public class SavingDataController {
 		mapper.registerModule(new JavaTimeModule());
 		mapper.enable(SerializationFeature.INDENT_OUTPUT);
 		try {
-			File file = new File(item.getId() + ".json");
+			File file = new File("src\\Files\\" + item.getId() + ".json");
 			mapper.writeValue(file, item);
 			System.out.println("Item data saved successfully.");
 		} catch (IOException e) {
@@ -54,7 +54,7 @@ public class SavingDataController {
 		mapper.registerModule(new JavaTimeModule());
 		mapper.enable(SerializationFeature.INDENT_OUTPUT);
 		try {
-			File file = new File(shelf.getId() + ".json");
+			File file = new File("src\\Files\\" + shelf.getId() + ".json");
 			mapper.writeValue(file, shelf);
 			System.out.println("Shelf data saved successfully.");
 		} catch (IOException e) {
