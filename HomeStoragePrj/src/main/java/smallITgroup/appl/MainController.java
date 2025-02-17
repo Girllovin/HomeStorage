@@ -67,9 +67,9 @@ public class MainController {
 		SavingDataController.saveStorageData(homeStorage);
 		
 		
-		File file = new File("Shelf1.json");
-		File file2 = new File("Shelf2.json");
-		File file3 = new File("target.Storage.json");
+		File file = new File("src\\Files\\Shelf1.json");
+		File file2 = new File("src\\\\Files\\\\Shelf2.json");
+		File file3 = new File("src\\Files\\target.Storage.json");
 		
 		ShelfDto shelf2 = SavingDataController.restoreShelf(file);
 		System.out.println(shelf2);
