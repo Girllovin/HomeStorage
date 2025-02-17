@@ -11,7 +11,7 @@
       "shelfId" : "A1",
       "volume" : 17.12,
       "weight" : 8.17,
-      "bestBeforeDate" : [ 2025, 2, 15, 20, 34, 14, 261153000 ]
+      "bestBeforeDate" : [ 2025, 2, 17, 18, 26, 44, 363027800 ]
     }, {
       "id" : "First item",
       "nameItem" : "Chair",
@@ -19,7 +19,7 @@
       "shelfId" : "A2",
       "volume" : 2.2,
       "weight" : 1.7,
-      "bestBeforeDate" : [ 2025, 2, 15, 20, 34, 14, 191880100 ]
+      "bestBeforeDate" : [ 2025, 2, 17, 18, 26, 44, 287979200 ]
     }, {
       "id" : "Second item",
       "nameItem" : "Watermelon",
@@ -27,7 +27,7 @@
       "shelfId" : "A1",
       "volume" : 1.05,
       "weight" : 2.1,
-      "bestBeforeDate" : [ 2025, 2, 15, 20, 34, 14, 261153000 ]
+      "bestBeforeDate" : [ 2025, 2, 17, 18, 26, 44, 362022300 ]
     } ],
     "capacity" : 500.0,
     "currentCapacity" : 500.0,
@@ -45,7 +45,7 @@
       "shelfId" : "A1",
       "volume" : 0.5,
       "weight" : 1.1,
-      "bestBeforeDate" : [ 2025, 2, 15, 20, 34, 14, 271718300 ]
+      "bestBeforeDate" : [ 2025, 2, 17, 18, 26, 44, 372032100 ]
     }, {
       "id" : "Forth item",
       "nameItem" : "Scooter",
@@ -53,7 +53,7 @@
       "shelfId" : "A1",
       "volume" : 40.12,
       "weight" : 11.15,
-      "bestBeforeDate" : [ 2025, 2, 15, 20, 34, 14, 271718300 ]
+      "bestBeforeDate" : [ 2025, 2, 17, 18, 26, 44, 372032100 ]
     }, {
       "id" : "Sixth item",
       "nameItem" : "Skateboard",
@@ -61,7 +61,7 @@
       "shelfId" : "A1",
       "volume" : 7.12,
       "weight" : 4.07,
-      "bestBeforeDate" : [ 2025, 2, 15, 20, 34, 14, 271718300 ]
+      "bestBeforeDate" : [ 2025, 2, 17, 18, 26, 44, 373037800 ]
     } ],
     "capacity" : 500.0,
     "currentCapacity" : 500.0,
