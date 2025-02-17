@@ -42,6 +42,5 @@ public class HomeStorageDto {
 		this.warnings = false;
 		this.stateWarnings = new ArrayList<String>();
 		
-	}
-	
+	}	
 }

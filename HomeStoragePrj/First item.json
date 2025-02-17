@@ -1,9 +1,0 @@
-{
-  "id" : "First item",
-  "nameItem" : "Chair",
-  "type" : "Furniture",
-  "shelfId" : "A2",
-  "volume" : 2.2,
-  "weight" : 1.7,
-  "bestBeforeDate" : [ 2025, 2, 15, 20, 34, 14, 191880100 ]
-}

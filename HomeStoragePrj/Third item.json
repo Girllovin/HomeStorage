@@ -1,9 +1,0 @@
-{
-  "id" : "Third item",
-  "nameItem" : "Hammer",
-  "type" : "Instruments",
-  "shelfId" : "A1",
-  "volume" : 17.12,
-  "weight" : 8.17,
-  "bestBeforeDate" : [ 2025, 2, 15, 20, 34, 14, 261153000 ]
-}

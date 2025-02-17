@@ -1,9 +1,0 @@
-{
-  "id" : "Forth item",
-  "nameItem" : "Scooter",
-  "type" : "Sport",
-  "shelfId" : "A1",
-  "volume" : 40.12,
-  "weight" : 11.15,
-  "bestBeforeDate" : [ 2025, 2, 15, 20, 34, 14, 271718300 ]
-}
