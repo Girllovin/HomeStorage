@@ -1,5 +1,6 @@
 package smallITgroup.appl;
 
+import java.time.LocalDateTime;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -27,10 +28,10 @@ public class MenuOptions {
 	            	manageShelvesMenu();	            	
 	                break;
 	            case 3:
-	            	manageProductMenu();	            	
+	            	itemsManagementMenu();	            	
 	                break;
 	            case 4:
-	            	monitorStorageMenu();	            	
+	            	showStorageMenu();	            	
 	                break;
 	            case 5:
 	            	searchMenu();
@@ -41,6 +42,7 @@ public class MenuOptions {
 	                break;
 
 	            case 0:
+	            	SavingDataController.saveStorageData(MainController.storage);
 	            	System.out.println("__________________\nApplication closed");
 	                scanner.close();
 	                System.exit(0);
@@ -66,13 +68,14 @@ public class MenuOptions {
 		HomeStorageDto newHomeStorage = new HomeStorageDto(storageNameString, storageCapacity );
 		
 //		Save new storage	
-		SavingData.saveStorageData(newHomeStorage);
+		SavingDataController.saveStorageData(newHomeStorage);
 	}
 
 	private static void manageShelvesMenu() {
 		System.out.println("""
-				1. Add new shelf
-				2. Remove shelf
+				1. Create new shelf
+				2. Change items type
+				3. Remove shelf
 
 				0. Main menu
 				""");
@@ -87,10 +90,20 @@ public class MenuOptions {
 			}		
 	        switch (choice) {
 	            case 1:  
-
+//	            	TODO
+//	            	Generated:
+	            	//  (String id (Ex. A-1), 
+	            	
+	            	
+//	            	User:
+//	            	String itemsType, double capacity, double permittedWeight)
+	            	
 	            	break;
 	            case 2:   
-
+//	            	Calling function storageController/changeItemsType
+	            	break;
+	            case 3:   
+//	            	Calling remove function
 	            	break;
 	            case 0:
 	            	System.out.println("/nReturn to the main menu\n");
@@ -101,9 +114,88 @@ public class MenuOptions {
 		}
 	}
 	
-	private static void manageProductMenu() {
-		// TODO Auto-generated method stub
-		
+	private static void itemsManagementMenu() {
+		System.out.println("""
+				1. Put Item
+				2. Take Item
+				3. Replace Item
+
+				0. Main menu
+				""");
+		while (true) {
+			int choice;
+			try {
+				choice = scanner.nextInt();
+			} catch(InputMismatchException e) {
+				System.err.println("Input Error! Try again.");
+				scanner.nextLine(); 
+				continue;
+			}		
+	        switch (choice) {
+	            case 1:  
+//	            	Generated:
+//	            	(String id, 
+	            	
+//	            	User:
+//	            	String nameItem, String type, double volume, double weight, LocalDateTime bestBeforeDate)
+	            	break;
+	            case 2:   
+//	            	Show full storage
+//	            	Input Item ID
+	            
+	            	break;
+	            case 3:   
+//	            	Show full storage
+//	            	Input Item ID
+//	            	Input new shelf number
+
+	            	break;
+	            case 0:
+	            	System.out.println("/nReturn to the main menu\n");
+	                return;
+	            default:
+	                System.err.println("\nInvalid choice. Please try again.\n");
+	        }
+		}			
+	}	
+	
+	private static void showStorageMenu() {
+		System.out.println("""
+				1. Show Items on the shelf
+				2. Show full storage
+
+				0. Main menu
+				""");
+		while (true) {
+			int choice;
+			try {
+				choice = scanner.nextInt();
+			} catch(InputMismatchException e) {
+				System.err.println("Input Error! Try again.");
+				scanner.nextLine(); 
+				continue;
+			}		
+	        switch (choice) {
+	            case 1:
+	            	System.out.println("Input shelf number: ");
+	            	String shelfNumber = scanner.next();	            	
+//	            	TODO List of shelves and type of items
+//	            	Input shelf number
+//	            	Checking if the shelf does exist
+	            	
+	            	controller.showItemsOnTheShelf(shelfNumber);	            	            	
+	            	return;
+	            case 2:             	
+	            	controller.showItemsInTheStorage(MainController.storage);
+	            	return;
+
+	            case 0:
+	            	System.out.println("\nReturn to the main menu\n");
+	                return;
+	            default:
+	                System.err.println("\nInvalid choice. Please try again.\n");
+	        }
+		}
 	}
 	
 	private static void searchMenu() {
@@ -141,58 +233,20 @@ public class MenuOptions {
 	        }
 		}		
 	}
-
-	private static void monitorStorageMenu() {
-		System.out.println("""
-				1. Show Items on the shelf
-				2. Show full storage
-
-				0. Main menu
-				""");
-		while (true) {
-			int choice;
-			try {
-				choice = scanner.nextInt();
-			} catch(InputMismatchException e) {
-				System.err.println("Input Error! Try again.");
-				scanner.nextLine(); 
-				continue;
-			}		
-	        switch (choice) {
-	            case 1:
-	            	System.out.println("Input shelf number: ");
-	            	String shelfNumber = scanner.next();	            	
-//	            	TODO Checking if the shelf does exist
-	            	
-	            	controller.showItemsOnTheShelf(shelfNumber);	            	            	
-	            	return;
-	            case 2:   
-//	            	TODO Correct storageName
-	            	String storageName = "Default name";
-	            	controller.showItemsInTheStorage(storageName);
-	            	return;
-
-	            case 0:
-	            	System.out.println("\nReturn to the main menu\n");
-	                return;
-	            default:
-	                System.err.println("\nInvalid choice. Please try again.\n");
-	        }
-		}
-	}
+	
 	private static void chooseOptions() {
 		System.out.println("""
-				||Home Storage Menegement System (HSMS)||
-
+				\n//Home Storage Menegement System (HSMS)//
+				||Main menu||
+				
 				1. Create Storage
 				2. Manage Shelves
 				3. Items Management
-				4. Inventory View
-				5. Search
+				4. Show Storage
+				5. Search Item
 				6. Expiration Date Tracking
 				
-				0. Exit the application
-				""");
-		
+				0. Save and Exit
+				""");		
 	}
 }
