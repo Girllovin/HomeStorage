@@ -14,12 +14,13 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@EqualsAndHashCode
 @ToString 
 public class ShelfDto {
 	
 	//description
+	@EqualsAndHashCode.Include
 	String id;                     // Unique identifier
+	
 	String itemsType;              // The type of items stored on this shelf
 	Set<ItemDto> items;            // List of items placed on the shelf
 	
@@ -46,10 +47,31 @@ public class ShelfDto {
 		this.currentWeight = 0.0;
 		this.warnings = false;
 		this.stateWarnings = new ArrayList<String>();
-		
-		
- 		
-		
+				
+	}
+
+	public void setItemsType(String itemsType) {
+		this.itemsType = itemsType;
+	}
+
+	public void setItems(Set<ItemDto> items) {
+		this.items = items;
+	}
+
+	public void setCurrentCapacity(double currentCapacity) {
+		this.currentCapacity = currentCapacity;
+	}
+
+	public void setCurrentWeight(double currentWeight) {
+		this.currentWeight = currentWeight;
+	}
+
+	public void setWarnings(boolean warnings) {
+		this.warnings = warnings;
+	}
+
+	public void setStateWarnings(List<String> stateWarnings) {
+		this.stateWarnings = stateWarnings;
 	}
     
     

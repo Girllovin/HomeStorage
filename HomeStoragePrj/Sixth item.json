@@ -1,0 +1,9 @@
+{
+  "id" : "Sixth item",
+  "nameItem" : "Skateboard",
+  "type" : "Sport",
+  "shelfId" : "A1",
+  "volume" : 7.12,
+  "weight" : 4.07,
+  "bestBeforeDate" : [ 2025, 2, 15, 20, 34, 14, 271718300 ]
+}
