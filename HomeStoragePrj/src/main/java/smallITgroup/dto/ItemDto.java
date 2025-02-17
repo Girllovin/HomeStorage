@@ -14,6 +14,7 @@ import lombok.ToString;
 @ToString 
 public class ItemDto {
 	
+
 	//description
 	@EqualsAndHashCode.Include
 	String id;                       // Unique identifier

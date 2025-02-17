@@ -8,7 +8,7 @@ public class Shelf {
 	//description
 		String Id;                     // Unique identifier
 		String itemsType;              // The type of items stored on this shelf
-		List<Item> items;           // List of items placed on the shelf
+		List<Item> items;              // List of items placed on the shelf
 		
 		//properties
 		double capacity;               // The total volume of the shelf that is allowed to accommodate items

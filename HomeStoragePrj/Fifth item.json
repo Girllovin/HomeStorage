@@ -1,0 +1,9 @@
+{
+  "id" : "Fifth item",
+  "nameItem" : "Bread",
+  "type" : "Food",
+  "shelfId" : "A1",
+  "volume" : 0.5,
+  "weight" : 1.1,
+  "bestBeforeDate" : [ 2025, 2, 14, 20, 18, 33, 403765200 ]
+}
