@@ -1,9 +1,0 @@
-{
-  "id" : "Second item",
-  "nameItem" : "Watermelon",
-  "type" : "Food",
-  "shelfId" : "A1",
-  "volume" : 1.05,
-  "weight" : 2.1,
-  "bestBeforeDate" : [ 2025, 2, 16, 0, 13, 2, 326966400 ]
-}
