@@ -64,7 +64,10 @@ public class MenuOptions {
 			System.err.println("Input Error! Try again. ");
 		}
 		System.out.println("Input storage height (lines quantity) : ");
-		char height = (char) scanner.nextInt();
+
+		char height = (char) scanner.nextInt(); 
+		System.out.println(height);
+
 //		Create new object HomeStorageDto
 		HomeStorageDto newHomeStorage = new HomeStorageDto(storageNameString, storageCapacity, height );
 		
@@ -74,6 +77,10 @@ public class MenuOptions {
 	}
 
 	private static void manageShelvesMenu() {
+		
+		String lineNumberString = "A";
+		int shelfNumber = 1;
+		
 		System.out.println("""
 				1. Create new shelf
 				2. Change items type
@@ -95,7 +102,7 @@ public class MenuOptions {
 //	            	TODO
 //	            	Generated:
 	            	//  (String id (Ex. A-1), 
-	            	
+
 	            	
 //	            	User:
 //	            	String itemsType, double capacity, double permittedWeight)
