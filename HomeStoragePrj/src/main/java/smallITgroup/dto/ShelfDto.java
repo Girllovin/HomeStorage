@@ -73,6 +73,11 @@ public class ShelfDto {
 	public void setStateWarnings(List<String> stateWarnings) {
 		this.stateWarnings = stateWarnings;
 	}
+
+	public void setId(String id) {
+		this.id = id;
+		
+	}
     
     
   
