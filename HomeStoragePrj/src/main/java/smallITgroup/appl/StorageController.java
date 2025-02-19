@@ -60,15 +60,39 @@ public class StorageController {
 		}
 		return null;
 	}
-
+	
+	//show items on the shelf
 	public static void showItemsOnTheShelf(String shelfId) {
-
-		// TODO
+		
+		StringBuilder builder = new StringBuilder();
+		ShelfDto shelf = findShelfById(shelfId);
+		if (shelf == null) {
+	        System.err.println("Error: Shelf with ID '" + shelfId + "' not found.");
+	        return;
+	    }
+		builder.append("\n").append(shelfId).append(" ").append(shelf.getItemsType());
+		if (shelf.getItems() == null || shelf.getItems().isEmpty()) {
+	        builder.append("\n(No items on this shelf)");
+	    } else {
+	        for (ItemDto item : shelf.getItems()) {
+	            builder.append("\n- ").append(item.getId()).append(": ").append(item.getNameItem());
+	        }
+	    }
+		System.out.println(builder);
+		
 	}
-
+	
+	//Show all items in the storage
 	public static void showItemsInTheStorage(HomeStorageDto homeStorage) {
-
-		// TODO
+		if (homeStorage == null) {
+			System.err.println("Error: Null storage provided to storage menegment system");
+			return;
+		}
+			for (ShelfDto shelf : homeStorage.getPlacingShelf()) {
+				showItemsOnTheShelf(shelf.getId());
+			}
+			checkGlobalWarnings(homeStorage);
+		
 	}
 
 	// Place an item on a shelf
@@ -215,7 +239,7 @@ public class StorageController {
 		String storageWarning;
 		try {
 			for (ShelfDto shelf : storage.getPlacingShelf()) {
-				if (shelf.getStateWarnings() != null) {
+				if (shelf.getStateWarnings() != null ) {
 					for (String warning: shelf.getStateWarnings()) {
 						storageWarning = shelf.getId() + " " + warning;
 						storage.getStateWarnings().add(storageWarning);
