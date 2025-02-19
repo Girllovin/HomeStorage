@@ -217,13 +217,13 @@ public class StorageController {
 			for (ShelfDto shelf : storage.getPlacingShelf()) {
 				if (shelf.getStateWarnings() != null) {
 					for (String warning: shelf.getStateWarnings()) {
-						storageWarning = shelf.getId() + warning;
+						storageWarning = shelf.getId() + " " + warning;
 						storage.getStateWarnings().add(storageWarning);
-						builder.append("\n" + storageWarning);
-					}
-					
+						builder.append("\n ").append(storageWarning);
+					}					
 				}
 			}
+			System.out.println(builder);
 		} catch (Exception e) {
 			System.err.println("Error checking storage warnings: " + e.getMessage());
 			e.printStackTrace();

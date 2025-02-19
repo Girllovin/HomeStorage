@@ -63,12 +63,14 @@ public class MenuOptions {
 		} catch (InputMismatchException e) {
 			System.err.println("Input Error! Try again. ");
 		}
-		
+		System.out.println("Input storage height (lines quantity) : ");
+		char height = (char) scanner.nextInt();
 //		Create new object HomeStorageDto
-		HomeStorageDto newHomeStorage = new HomeStorageDto(storageNameString, storageCapacity );
+		HomeStorageDto newHomeStorage = new HomeStorageDto(storageNameString, storageCapacity, height );
 		
 //		Save new storage	
 		SavingDataController.saveStorageData(newHomeStorage);
+		System.out.println(newHomeStorage);
 	}
 
 	private static void manageShelvesMenu() {

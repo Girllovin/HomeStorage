@@ -63,7 +63,7 @@ public class MainController {
 		List<ShelfDto> shelfs = new ArrayList<ShelfDto>();
 		shelfs.add(shelf1);
 		shelfs.add(shelf3);
-		HomeStorageDto homeStorage = new HomeStorageDto("Our storage room", warnings, shelfs, 2000, 0, false, warnings);
+		HomeStorageDto homeStorage = new HomeStorageDto("Our storage room", warnings, shelfs, 2000, 0,'A', false, warnings);
 		SavingDataController.saveStorageData(homeStorage);
 		
 		
