@@ -1,10 +1,14 @@
 package smallITgroup.appl;
 
+import java.io.File;
 import java.time.LocalDateTime;
 import java.util.InputMismatchException;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 import smallITgroup.dto.HomeStorageDto;
+import smallITgroup.dto.ShelfDto;
 
 public class MenuOptions {
 	static Scanner scanner = new Scanner(System.in);
@@ -53,7 +57,8 @@ public class MenuOptions {
 		}	
 	}	
 
-	private static void createStorage() {
+	private static void createStorage() {		
+//		User input parameters
 		System.out.println("Input storage name: ");
 		String storageNameString = scanner.next();
 		System.out.println("Input total storage volume(Ex. 1.2): ");
@@ -64,12 +69,36 @@ public class MenuOptions {
 			System.err.println("Input Error! Try again. ");
 		}
 		System.out.println("Input storage height (lines quantity) : ");
-
-		char height = (char) scanner.nextInt(); 
-		System.out.println(height);
-
+		char height = 0;
+		try {
+			height = (char) scanner.nextInt();
+		} catch (InputMismatchException e) {
+			System.err.println("Input Error! Try again. ");
+		} 
+		System.out.println("Input storage lenght (columns quantity) : ");
+		int lenght = 0;
+		try {
+			lenght = (char) scanner.nextInt();
+		} catch (InputMismatchException e) {
+			System.err.println("Input Error! Try again. ");
+		} 
+		
 //		Create new object HomeStorageDto
-		HomeStorageDto newHomeStorage = new HomeStorageDto(storageNameString, storageCapacity, height );
+		HomeStorageDto newHomeStorage = new HomeStorageDto(storageNameString, storageCapacity, height, lenght );
+		
+//		Create shelves		
+		for (int i = 1; i<=(int)height; i++) {
+			System.out.println(i);
+			for (int j = 1; j<=lenght; j++) {
+				String id = "" + (char)(i + 64) + "-" + j;
+				ShelfDto shelf = new ShelfDto(id, null, 0, 0);
+				SavingDataController.saveShelfData(shelf);
+				List<ShelfDto> shelfList = newHomeStorage.getPlacingShelf();
+				shelfList.add(shelf);
+				newHomeStorage.setPlacingShelf(shelfList);		
+			}			
+		}
+		
 		
 //		Save new storage	
 		SavingDataController.saveStorageData(newHomeStorage);
@@ -77,14 +106,9 @@ public class MenuOptions {
 	}
 
 	private static void manageShelvesMenu() {
-		
-		String lineNumberString = "A";
-		int shelfNumber = 1;
-		
+	
 		System.out.println("""
-				1. Create new shelf
-				2. Change items type
-				3. Remove shelf
+				1. Show shelves types
 
 				0. Main menu
 				""");
@@ -99,21 +123,9 @@ public class MenuOptions {
 			}		
 	        switch (choice) {
 	            case 1:  
-//	            	TODO
-//	            	Generated:
-	            	//  (String id (Ex. A-1), 
-
-	            	
-//	            	User:
-//	            	String itemsType, double capacity, double permittedWeight)
-	            	
-	            	break;
-	            case 2:   
-//	            	Calling function storageController/changeItemsType
-	            	break;
-	            case 3:   
-//	            	Calling remove function
-	            	break;
+//	            	Get all shelves types
+	            	getShelfList();	            	
+	            	return;
 	            case 0:
 	            	System.out.println("/nReturn to the main menu\n");
 	                return;
@@ -123,6 +135,27 @@ public class MenuOptions {
 		}
 	}
 	
+	private static void getShelfList() {
+    	File fileStore = new File("src\\Files\\target.Storage.json");	            	
+    	try {
+			MainController.storage = SavingDataController.restoreStorage(fileStore);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+    	for (ShelfDto shelf : MainController.storage.getPlacingShelf()) {
+    		String idType = shelf.getItemsType();
+			if (idType == null) {	
+				idType = "---";				
+			}	
+			System.out.println(shelf.getId() + " " + idType);
+		}		
+	}
+
+	public static ShelfDto nextShelf() {
+//		TODO		
+		return null;
+	}
+
 	private static void itemsManagementMenu() {
 		System.out.println("""
 				1. Put Item

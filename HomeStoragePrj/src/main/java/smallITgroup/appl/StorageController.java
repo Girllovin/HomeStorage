@@ -120,7 +120,7 @@ public class StorageController {
 					}
 				}
 			} else {
-				destinationShelf = MainController.nextShelf;
+				destinationShelf = MenuOptions.nextShelf();
 			}
 		} catch (Exception e) {
 			System.err.println("Error finding shelf for item: " + e.getMessage());
