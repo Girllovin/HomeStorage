@@ -25,17 +25,18 @@ public class HomeStorageDto {
 	//characteristics
 	double storageCapacity;            // Total storage capacity
 	double currentFreeStorageCapacity; // Current volume of items in storage
+	char height;					   // Quantity of lines in storage
 	
 	//notifications
 	boolean warnings;                  // Availability of storage status warnings
     List<String> stateWarnings;        // Storage status warnings
     
     //custom constructor
-	public HomeStorageDto(String storageNameString, double storageCapacity) {
+	public HomeStorageDto(String storageNameString, double storageCapacity, char height) {
 		super();
 		this.storageNameString = storageNameString;
 		this.storageCapacity = storageCapacity;
-		
+		this.height = (char) (height + 64) ;
 		this.itemsTypeList = new ArrayList<String>();
 		this.placingShelf = new ArrayList<ShelfDto>();
 		this.currentFreeStorageCapacity = 0.0;
